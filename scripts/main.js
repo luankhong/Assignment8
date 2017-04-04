@@ -22,8 +22,7 @@
         return myTruck.createOrder.call(myTruck, data)
             .then(function() {
                 checkList.addRow.call(checkList, data);
-            }
-            );
+            });
     });
 
     formHandler.addInputHandler(Validation.isCompanyEmail, Validation.isDecaf);

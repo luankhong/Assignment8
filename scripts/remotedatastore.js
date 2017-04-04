@@ -13,7 +13,7 @@
     }
 
     RemoteDataStore.prototype.add = function(key, val) {
-        val.id = val.emailAddress;  //change id to equal emailAddress
+        val.id = val.emailAddress; //change id to equal emailAddress
         return $.post(this.serverUrl, val, function(serverResponse) {
             console.log(serverResponse);
         });
