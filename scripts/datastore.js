@@ -8,13 +8,13 @@
     }
 
     function promiseResolvedWith(value) {
-        var promise = new Promise(function(resolve, reject) {
+        var promise = new Promise(function(resolve) {
             resolve(value);
         });
         return promise;
     }
 
-    DataStore.prototype.add = function(key, val) {
+    DataStore.prototype.add = function() {
         return promiseResolvedWith(null);
     };
 
@@ -26,7 +26,7 @@
         return promiseResolvedWith(this.data);
     };
 
-    DataStore.prototype.remove = function(key) {
+    DataStore.prototype.remove = function() {
         return promiseResolvedWith(null);
     };
 
